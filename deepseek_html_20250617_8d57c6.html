@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Haven - Hôtel 5 étoiles</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap">
+    <style>
+        :root {
+            --primary: #8B6B4D;
+            --secondary: #F5F0E6;
+            --dark: #333333;
+            --light: #FFFFFF;
+            --accent: #D4AF37;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-image.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light);
+        }
+        
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .navbar.scrolled {
+            background: var(--light);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        
+        .btn {
+            background: var(--primary);
+            color: var(--light);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .room-card {
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 50px 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">LUXURY HAVEN</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#chambres">Chambres & Suites</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#restauration">Restauration</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reservation" class="btn">Réserver</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <h1>Bienvenue au Luxury Haven</h1>
+        <p class="lead">Un havre de paix au cœur de la ville</p>
+        <a href="#reservation" class="btn">Réserver maintenant</a>
+    </section>
+
+    <!-- À propos -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Un hôtel d'exception</h2>
+                <p>Depuis 1920, le Luxury Haven accueille ses hôtes dans un cadre raffiné alliant tradition et modernité. Notre établissement 5 étoiles vous promet une expérience inoubliable.</p>
+                <div class="signature">
+                    <img src="signature.png" alt="Signature du directeur">
+                    <p>Jean Dupont, Directeur</p>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="hotel-exterior.jpg" alt="Extérieur de l'hôtel">
+            </div>
+        </div>
+    </section>
+
+    <!-- Chambres et Suites -->
+    <section class="rooms" id="chambres">
+        <div class="container">
+            <h2>Nos Chambres & Suites</h2>
+            <p class="section-subtitle">Chaque espace a été conçu pour votre confort et bien-être</p>
+            
+            <div class="room-grid">
+                <!-- Chambre Classique -->
+                <div class="room-card">
+                    <img src="classic-room.jpg" alt="Chambre Classique">
+                    <div class="room-info">
+                        <h3>Chambre Classique</h3>
+                        <p>À partir de <span class="price">€250</span> / nuit</p>
+                        <a href="#" class="btn">Découvrir</a>
+                    </div>
+                </div>
+                
+                <!-- Suite Deluxe -->
+                <div class="room-card">
+                    <img src="deluxe-suite.jpg" alt="Suite Deluxe">
+                    <div class="room-info">
+                        <h3>Suite Deluxe</h3>
+                        <p>À partir de <span class="price">€450</span> / nuit</p>
+                        <a href="#" class="btn">Découvrir</a>
+                    </div>
+                </div>
+                
+                <!-- Suite Présidentielle -->
+                <div class="room-card">
+                    <img src="presidential-suite.jpg" alt="Suite Présidentielle">
+                    <div class="room-info">
+                        <h3>Suite Présidentielle</h3>
+                        <p>À partir de <span class="price">€850</span> / nuit</p>
+                        <a href="#" class="btn">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Nos Services Exclusifs</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="spa-icon.svg" alt="Spa">
+                    <h3>Spa Luxury</h3>
+                    <p>Détendez-vous dans notre espace bien-être de 1500m² avec piscine intérieure.</p>
+                </div>
+                <div class="service-item">
+                    <img src="concierge-icon.svg" alt="Conciergerie">
+                    <h3>Conciergerie 24/7</h3>
+                    <p>Notre équipe dévouée est à votre service jour et nuit pour répondre à tous vos besoins.</p>
+                </div>
+                <div class="service-item">
+                    <img src="event-icon.svg" alt="Événements">
+                    <h3>Événements</h3>
+                    <p>Organisez vos réceptions dans nos salons prestigieux avec service traiteur étoilé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="gallery">
+        <h2>Galerie</h2>
+        <div class="gallery-grid">
+            <img src="gallery1.jpg" alt="Hall d'entrée">
+            <img src="gallery2.jpg" alt="Restaurant">
+            <img src="gallery3.jpg" alt="Piscine">
+            <img src="gallery4.jpg" alt="Chambre">
+            <img src="gallery5.jpg" alt="Spa">
+            <img src="gallery6.jpg" alt="Vue sur la ville">
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Ce que nos clients disent</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Un séjour absolument parfait. Le service est impeccable et l'attention aux détails est remarquable."</p>
+                    <div class="client">
+                        <img src="client1.jpg" alt="Marie L.">
+                        <p>Marie L.</p>
+                    </div>
+                </div>
+                <!-- Plus de témoignages -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Réservation -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Contactez-nous</h2>
+                <p>123 Avenue des Champs-Élysées, 75008 Paris</p>
+                <p>+33 1 23 45 67 89</p>
+                <p>contact@luxuryhaven.com</p>
+                
+                <div class="social-links">
+                    <a href="#"><img src="facebook-icon.svg" alt="Facebook"></a>
+                    <a href="#"><img src="instagram-icon.svg" alt="Instagram"></a>
+                    <a href="#"><img src="twitter-icon.svg" alt="Twitter"></a>
+                </div>
+            </div>
+            
+            <div class="reservation-form" id="reservation">
+                <h2>Réserver</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="date" placeholder="Arrivée">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder="Départ">
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option>Type de chambre</option>
+                            <option>Chambre Classique</option>
+                            <option>Suite Deluxe</option>
+                            <option>Suite Présidentielle</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Vérifier la disponibilité</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">LUXURY HAVEN</div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Luxury Haven. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script pour la navbar qui change au scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Script pour le slider des témoignages
+        // (à implémenter avec un plugin ou du JS custom)
+    </script>
+</body>
+</html>
